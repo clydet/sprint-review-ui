@@ -1,0 +1,9 @@
+<h2>The Reviews</h2>
+<ul class="reviews">
+  <li *ngFor="let review of reviews" (click)="onSelect(review)"
+    [class.selected]="review === selectedReview">
+    <span class="banner">{{review.id}}</span> {{review.name}}
+  </li>
+</ul>
+
+<app-review-detail [review]="selectedReview"></app-review-detail>

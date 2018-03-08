@@ -1,0 +1,11 @@
+<div *ngIf="review">
+  <h2>{{ review.name | uppercase }} Details</h2>
+  <div><span>id: </span>{{review.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="review.name" placeholder="name">
+    </label>
+  </div>
+  <div><span>owner: </span>{{review.owner}}</div>
+  <div><span>description: </span>{{review.description}}</div>
+</div>
